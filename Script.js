@@ -167,7 +167,13 @@ window.onload= function ()
 
 function EVENTS()
 {
-
+     document.getElementById('help').onclick = function () {
+        if( document.getElementById('infoHelp').style.visibility == 'visible' ) 
+            document.getElementById('infoHelp').style.visibility = 'hidden';
+        else
+            document.getElementById('infoHelp').style.visibility = 'visible'; 
+    }
+     
     for (var i = 1; i <= ddd.length ; i++) {
 
         ddd[i - 1].onmouseover = showRoot; //show the roots of the course 
