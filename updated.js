@@ -1479,7 +1479,7 @@ function EVENTS()
     //add semsister
     document.getElementById('Base').onclick = newTerm;
 
-    //document.getElementById('Base').ondblclick = PopUpTerm;
+    document.getElementById('Base').ondblclick = PopUpTerm;
 
     if ((/Mobi/.test(navigator.userAgent))) {document.getElementById('Base').onclick = newTerm; }
 
@@ -1843,12 +1843,11 @@ function newTerm ()
         
             var rect = document.getElementById('BODY').getBoundingClientRect(); //to decleare where the canvas to take pos from
             var root = document.documentElement; //the base page 
-            var scro = Math.max(document.body.scrollLeft,document.documentElement.scrollLeft));
-            mouseX = event.clientX + scro ;
-            console.log("OffsetX= "+event.offsetX);
-            console.log("rextLEFT= "+rect.left);
+            var scrollX = Math.max(document.body.scrollLeft,document.documentElement.scrollLeft); 
+            mouseX = event.clientX + scrollX;
+           
             console.log("ClientX= "+event.clientX);
-            console.log("Scroll= "+root.scrollLeft);
+            console.log("Scroll= " + scrollX );
 
             mouseY = event.clientY + root.scrollTop;
         
